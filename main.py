@@ -29,7 +29,7 @@ def start_again():
 def window_destroy():
     window.destroy()
 
-# nastaví další otázku kvízu
+# nastaví další otázku kvízu a vyhodnotí odpověď
 def next():
     global Score, Question_no
     if val1.get() == 1:
@@ -57,7 +57,7 @@ def next():
         val2.set(0)
         question.config(text=question_list[Question_no-1])
 
-# Vyhodnotí odpověď uživatele
+# Nastavení pouze jedné správné odpovědi
 def check(option):
     if option == 1:
         val2.set(0)
